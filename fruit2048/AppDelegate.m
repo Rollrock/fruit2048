@@ -10,6 +10,8 @@
 #import "MainViewController.h"
 #import "YouMiConfig.h"
 
+#define SKIN_SETTING  @"SKIN_SETTING"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,18 +21,28 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    
+    //
     MainViewController * vc = [[MainViewController alloc]init];
     self.window.rootViewController = vc;
     
-    
-    
+    //
     [YouMiConfig launchWithAppID:@"93bf8a79d9940719" appSecret:@"e8de9ae6004e9d60"];
     [YouMiConfig setFullScreenWindow:self.window];
-
-    
     
     return YES;
+}
+
+
+-(void)setSkin:(NSInteger)skin
+{
+    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+    [def setInteger:skin forKey:SKIN_SETTING];
+}
+
+-(NSInteger)getSkin
+{
+    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+    return [def integerForKey:SKIN_SETTING];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

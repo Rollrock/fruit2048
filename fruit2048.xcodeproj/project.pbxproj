@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481235B819B8810300A79195 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481235B719B8810300A79195 /* MenuViewController.m */; };
 		4855D46A199CD08E00E350D7 /* libOpenIDFA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4855D468199CD08E00E350D7 /* libOpenIDFA.a */; };
 		4855D46B199CD08E00E350D7 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4855D469199CD08E00E350D7 /* libYouMi.a */; };
 		4855D46D199CD0F600E350D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4855D46C199CD0F600E350D7 /* CoreData.framework */; };
@@ -72,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		481235B619B8810300A79195 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		481235B719B8810300A79195 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		4855D45E199CD08E00E350D7 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
 		4855D45F199CD08E00E350D7 /* youmiconfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = youmiconfuse.h; sourceTree = "<group>"; };
 		4855D460199CD08E00E350D7 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
@@ -290,15 +293,17 @@
 				4874CFCA193C199800996F09 /* AdMob */,
 				4874CFD3193C199800996F09 /* GameView.h */,
 				4874CFD4193C199800996F09 /* GameView.m */,
-				4874CFD5193C199800996F09 /* images */,
-				4874CFE7193C199800996F09 /* MainViewController.h */,
 				4874CFE8193C199800996F09 /* MainViewController.m */,
+				4874CFE7193C199800996F09 /* MainViewController.h */,
+				4874CFD5193C199800996F09 /* images */,
 				4874CFA3193C194800996F09 /* fruit2048-Info.plist */,
 				4874CFA4193C194800996F09 /* InfoPlist.strings */,
 				4874CFA7193C194800996F09 /* main.m */,
 				4874CFA9193C194800996F09 /* fruit2048-Prefix.pch */,
 				4855D474199CD4F800E350D7 /* YouMiAdvViewController.h */,
 				4855D475199CD4F800E350D7 /* YouMiAdvViewController.m */,
+				481235B619B8810300A79195 /* MenuViewController.h */,
+				481235B719B8810300A79195 /* MenuViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				4874CFAC193C194800996F09 /* AppDelegate.m in Sources */,
 				4855D479199CE2EE00E350D7 /* AppsViewController.m in Sources */,
 				4874CFA8193C194800996F09 /* main.m in Sources */,
+				481235B819B8810300A79195 /* MenuViewController.m in Sources */,
 				4855D476199CD4F800E350D7 /* YouMiAdvViewController.m in Sources */,
 				4874CFFC193C199900996F09 /* MainViewController.m in Sources */,
 			);

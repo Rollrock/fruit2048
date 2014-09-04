@@ -9,6 +9,7 @@
 #import "GameView.h"
 #import "YouMiWall.h"
 #import "youmiconfuse.h"
+#import "MenuViewController.h"
 
 
 
@@ -24,6 +25,8 @@
 #define SMALLEXT_MOVE_DIS   20
 
 #define GRID_TAG_BASE   10000
+
+
 
 
 @interface GameView()
@@ -44,8 +47,6 @@
     
     int score;
     
-    
-    
 }
 @end
 
@@ -64,8 +65,6 @@
     
     return self;
 }
-
-
 
 
 -(void)revertData
@@ -112,8 +111,6 @@
     [self addSubview:bgView];
     
     {
-        
-        
         CGRect rect;
         
         UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
@@ -163,47 +160,10 @@
         
     }
     
-
-    {
-        
-        CGRect rect = CGRectMake(90, 50, 60, 30);
-        UIButton * btn = [[UIButton alloc]initWithFrame:rect];
-        [btn setTitle:@"菜单" forState:UIControlStateNormal];
-        btn.layer.cornerRadius = 5;
-        btn.backgroundColor = [UIColor orangeColor];
-        
-        [bgView addSubview:btn];
-        
-        [btn addTarget:self action:@selector(menuClicken) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-    
-    {
-        CGRect rect = CGRectMake(90, 50, 60, 30);
-        UIButton * btn = [[UIButton alloc]initWithFrame:rect];
-        [btn setTitle:@"菜单" forState:UIControlStateNormal];
-        btn.layer.cornerRadius = 5;
-        btn.backgroundColor = [UIColor orangeColor];
-        
-        [bgView addSubview:btn];
-        
-        [btn addTarget:self action:@selector(menuClicken) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-    
     
     {
         [self addObserver:self forKeyPath:@"score" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     }
-    
-    
-  
-    
-}
-
--(void)menuClicken
-{
-    NSLog(@"menuClicken");
 }
 
 

@@ -14,6 +14,7 @@
 #import "youmiconfuse.h"
 #import "YouMiAdvViewController.h"
 #import "AppsViewController.h"
+#import "MenuViewController.h"
 
 
 @interface MainViewController ()
@@ -88,8 +89,30 @@
         _canShowAdv = YES;
 
     }
+    
+    //菜单
+    {
+        
+        CGRect rect = CGRectMake(100, 80, 60, 30);
+        UIButton * btn = [[UIButton alloc]initWithFrame:rect];
+        [btn setTitle:@"菜单" forState:UIControlStateNormal];
+        btn.layer.cornerRadius = 5;
+        btn.backgroundColor = [UIColor orangeColor];
+        
+        [self.view addSubview:btn];
+        
+        [btn addTarget:self action:@selector(menuClicken) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+
 }
 
+
+-(void)menuClicken
+{
+    MenuViewController * vc = [[MenuViewController alloc]initWithNibName:nil bundle:nil];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 -(void)showAppClicked
 {
@@ -130,8 +153,8 @@
     
     [data setCalendar:cal];
     [data setYear:2014];
-    [data setMonth:9];
-    [data setDay:15];
+    [data setMonth:11];
+    [data setDay:1];
     
     NSDate * farDate = [cal dateFromComponents:data];
     
