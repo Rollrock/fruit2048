@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "AppDelegate.h"
+#import "GADBannerView.h"
 
 
 #define BACK_POS_X  20
@@ -43,8 +44,12 @@
     // Do any additional setup after loading the view.
     
     
-    [self layoutView];
+    [self layoutSkinView];
     
+    [self layoutInfoView];
+    
+    [self layoutAdvView];
+    //
     
     {
         UIButton * btnBack = [[UIButton alloc]initWithFrame:CGRectMake(BACK_POS_X-10, BACK_POS_Y, BACK_WIDTH, BACK_HEIGHT)];
@@ -53,17 +58,74 @@
         [self.view addSubview:btnBack];
     }
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 
--(void)layoutView
+-(void)layoutAdvView
+{
+    GADBannerView*  _bannerView = [[GADBannerView alloc]initWithAdSize:kGADAdSizeMediumRectangle origin:CGPointMake(10, 230)];
+    
+    _bannerView.adUnitID = @"a1527e3f3d6c7bc";//调用你的id
+    
+    _bannerView.rootViewController = self;
+    
+    [self.view addSubview:_bannerView];//添加bannerview到你的试图
+    
+    [_bannerView loadRequest:[GADRequest request]];
+
+}
+
+-(void)layoutInfoView
+{
+    /*
+    CGRect rect;
+    
+    UIView * bgView;
+    
+    {
+        rect = CGRectMake(5, 250, 310, 200);
+        bgView = [[UIView alloc]initWithFrame:rect];
+        bgView.backgroundColor = [UIColor grayColor];
+        bgView.layer.cornerRadius = 10;
+        bgView.layer.masksToBounds = YES;
+        bgView.userInteractionEnabled = YES;
+        
+        [self.view addSubview:bgView];
+    }
+    
+    
+    {
+        rect = CGRectMake(0, 20, 310, 20);
+        UILabel * lab = [[UILabel alloc]initWithFrame:rect];
+        lab.text = @"QQ:479408690";
+        lab.textAlignment = NSTextAlignmentCenter;
+        lab.backgroundColor = [UIColor clearColor];
+        [bgView addSubview:lab];
+    }
+     */
+
+}
+
+-(void)layoutSkinView
 {
     
     CGRect rect;
+    UIView * bgView;
     
     {
-        rect = CGRectMake(50, 30, 80, 80);
+        rect = CGRectMake(5, 20, 310, 200);
+        bgView = [[UIView alloc]initWithFrame:rect];
+        bgView.backgroundColor = [UIColor grayColor];
+        bgView.layer.cornerRadius = 10;
+        bgView.layer.masksToBounds = YES;
+        bgView.userInteractionEnabled = YES;
+        
+        [self.view addSubview:bgView];
+    }
+    
+    {
+        rect = CGRectMake(50, 10, 80, 80);
         UIImageView * imgView = [[UIImageView alloc]initWithFrame:rect];
         imgView.image = [UIImage imageNamed:@"2_0"];
         imgView.layer.cornerRadius = 20;
@@ -71,7 +133,7 @@
         imgView.userInteractionEnabled = YES;
         imgView.tag = BASE_TAG + 0;
         
-        [self.view addSubview:imgView];
+        [bgView addSubview:imgView];
         
         UITapGestureRecognizer * g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imgViewClicked:)];
         [imgView addGestureRecognizer:g];
@@ -79,7 +141,7 @@
     }
     
     {
-        rect = CGRectMake(190, 30, 80, 80);
+        rect = CGRectMake(190, 10, 80, 80);
         UIImageView * imgView = [[UIImageView alloc]initWithFrame:rect];
         imgView.image = [UIImage imageNamed:@"2_1"];
         imgView.layer.cornerRadius = 20;
@@ -87,7 +149,7 @@
         imgView.userInteractionEnabled = YES;
         imgView.tag = BASE_TAG + 1;
         
-        [self.view addSubview:imgView];
+        [bgView addSubview:imgView];
         
         UITapGestureRecognizer * g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imgViewClicked:)];
         [imgView addGestureRecognizer:g];
@@ -95,7 +157,7 @@
     
     
     {
-        rect = CGRectMake(50, 130, 80, 80);
+        rect = CGRectMake(50, 110, 80, 80);
         UIImageView * imgView = [[UIImageView alloc]initWithFrame:rect];
         imgView.image = [UIImage imageNamed:@"2_2"];
         imgView.layer.cornerRadius = 20;
@@ -103,14 +165,14 @@
         imgView.userInteractionEnabled = YES;
         imgView.tag = BASE_TAG + 2;
         
-        [self.view addSubview:imgView];
+        [bgView addSubview:imgView];
         
         UITapGestureRecognizer * g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imgViewClicked:)];
         [imgView addGestureRecognizer:g];
     }
     
     {
-        rect = CGRectMake(190, 130, 80, 80);
+        rect = CGRectMake(190, 110, 80, 80);
         UIImageView * imgView = [[UIImageView alloc]initWithFrame:rect];
         imgView.image = [UIImage imageNamed:@"2_3"];
         imgView.layer.cornerRadius = 20;
@@ -118,7 +180,7 @@
         imgView.userInteractionEnabled = YES;
         imgView.tag = BASE_TAG + 3;
         
-        [self.view addSubview:imgView];
+        [bgView addSubview:imgView];
         
         UITapGestureRecognizer * g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imgViewClicked:)];
         [imgView addGestureRecognizer:g];
@@ -133,7 +195,7 @@
         _imgViewSelected.userInteractionEnabled = YES;
         _imgViewSelected.tag = BASE_TAG + 3;
         
-        [self.view addSubview:_imgViewSelected];
+        [bgView addSubview:_imgViewSelected];
         
         [self setSelectView:[(AppDelegate*)[[UIApplication sharedApplication] delegate] getSkin] ];
         
@@ -150,32 +212,32 @@
     {
         case 0:
         {
-            pt = CGPointMake(110, 90);
+            pt = CGPointMake(110, 70);
             
         }
             break;
             
         case 1:
         {
-            pt = CGPointMake(250, 90);
+            pt = CGPointMake(250, 70);
         }
             break;
             
         case 2:
         {
-            pt = CGPointMake(110, 190);
+            pt = CGPointMake(110, 170);
         }
             break;
             
         case 3:
         {
-            pt = CGPointMake(250, 190);
+            pt = CGPointMake(250, 170);
         }
             break;
             
         default:
             
-            pt = CGPointMake(100, 100);
+             pt = CGPointMake(110, 70);
             
             break;
     }
