@@ -12,4 +12,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
+-(void)setSkin:(NSInteger)skin;
+-(NSInteger)getSkin;
+
+-(void)setSkinChange:(BOOL)bFlag;
+-(BOOL)getSkinChange;
+
 @end

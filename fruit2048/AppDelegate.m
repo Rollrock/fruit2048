@@ -11,6 +11,7 @@
 #import "YouMiConfig.h"
 
 #define SKIN_SETTING  @"SKIN_SETTING"
+#define SKIN_CHANGE_STATE @"SKIN_CHAGE_STATE"
 
 @implementation AppDelegate
 
@@ -32,16 +33,33 @@
     return YES;
 }
 
+-(void)setSkinChange:(BOOL)bFlag
+{
+    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+    [def setBool:bFlag forKey:SKIN_CHANGE_STATE];
+    
+    [def synchronize];
+}
+
+-(BOOL)getSkinChange
+{
+    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+    return [def boolForKey:SKIN_CHANGE_STATE];
+}
 
 -(void)setSkin:(NSInteger)skin
 {
     NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
     [def setInteger:skin forKey:SKIN_SETTING];
+    [def synchronize];
+    
+    [self setSkinChange:YES];
 }
 
 -(NSInteger)getSkin
 {
     NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+    
     return [def integerForKey:SKIN_SETTING];
 }
 

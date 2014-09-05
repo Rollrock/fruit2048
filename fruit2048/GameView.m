@@ -10,6 +10,7 @@
 #import "YouMiWall.h"
 #import "youmiconfuse.h"
 #import "MenuViewController.h"
+#import "AppDelegate.h"
 
 
 
@@ -47,6 +48,10 @@
     
     int score;
     
+    AppDelegate * appDel;
+    
+    int _skin;
+    
 }
 @end
 
@@ -57,6 +62,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+        appDel = [[UIApplication sharedApplication] delegate];
+        
+        _skin = [appDel getSkin];
         
         [self initData];
         
@@ -386,8 +395,10 @@
                     
                     CGRect rect= CGRectMake(GRID_TIP_X + (GRID_TIP_X+PER_GRID_WIDTH)*randColumn, GRID_TIP_Y + (GRID_TIP_Y + PER_GRID_HEIGH) * randRow, PER_GRID_WIDTH, PER_GRID_HEIGH);
                     UIImageView * imgView = [[UIImageView alloc]initWithFrame:rect];
+                    imgView.layer.cornerRadius = 8;
+                    imgView.layer.masksToBounds = YES;
                     imgView.tag = randRow * COLUMN_COUNT + randColumn + GRID_TAG_BASE;
-                    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",dataArray[randRow][randColumn]]];
+                    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d_%d",dataArray[randRow][randColumn],_skin]];
                     imgView.transform = CGAffineTransformMakeScale(0.001, 0.001);
                     [gridBgView addSubview:imgView];
                     
@@ -432,8 +443,10 @@
                                 
                                 CGRect rect= CGRectMake(GRID_TIP_X + (GRID_TIP_X+PER_GRID_WIDTH)*randColumn, GRID_TIP_Y + (GRID_TIP_Y + PER_GRID_WIDTH) * randRow, PER_GRID_WIDTH, PER_GRID_HEIGH);
                                 UIImageView * imgView = [[UIImageView alloc]initWithFrame:rect];
+                                imgView.layer.cornerRadius = 8;
+                                imgView.layer.masksToBounds = YES;
                                 imgView.tag = randRow * COLUMN_COUNT + randColumn + GRID_TAG_BASE;
-                                imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",dataArray[randRow][randColumn]]];
+                                imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d_%d",dataArray[randRow][randColumn], _skin]];
                                 
                                 NSLog(@"imgViewTag:%d",imgView.tag);
                                 
@@ -995,6 +1008,22 @@
     }
 }
 
+
+-(void)refreshGameSkin
+{
+    _skin = [appDel getSkin];
+    
+    
+    for(UIImageView * imgView in [gridBgView subviews] )
+    {
+        [imgView removeFromSuperview];
+    }
+    
+    [self drawGame];
+    
+}
+
+
 -(void)drawGameAnimation:(MOVE_DIR)dir
 {
     
@@ -1044,7 +1073,7 @@
                                         
                                         [UIView animateWithDuration:0.05f animations:^(void){
                                             
-                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",dataArray[row][column- moveArray[row][column]]]];
+                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d_%d",dataArray[row][column- moveArray[row][column]],_skin]];
                                             
                                             imgView.transform = CGAffineTransformMakeScale(0.8f, 0.8f);
                                             
@@ -1117,7 +1146,7 @@
                                         
                                         [UIView animateWithDuration:0.05f animations:^(void){
                                             
-                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",dataArray[row][column+ moveArray[row][column]]]];
+                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d_%d",dataArray[row][column+ moveArray[row][column]],_skin]];
                                           
                                             imgView.transform = CGAffineTransformMakeScale(0.8f, 0.8f);
                                             
@@ -1188,7 +1217,7 @@
                                         
                                         [UIView animateWithDuration:0.05f animations:^(void){
                                             
-                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",dataArray[row-moveArray[row][column]][column]]];
+                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d_%d",dataArray[row-moveArray[row][column]][column],_skin]];
                                             
                                             imgView.transform = CGAffineTransformMakeScale(0.8f, 0.8f);
                                             
@@ -1256,7 +1285,7 @@
                                         
                                         [UIView animateWithDuration:0.05f animations:^(void){
  
-                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",dataArray[row+moveArray[row][column]][column]]];
+                                            imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d_%d",dataArray[row+moveArray[row][column]][column],_skin]];
 
                                             
                                             imgView.transform = CGAffineTransformMakeScale(0.8f, 0.8f);
@@ -1303,7 +1332,9 @@
                     
                     UIImageView * imgView = [[UIImageView alloc]initWithFrame:rect];
                     imgView.tag = row * COLUMN_COUNT + column+GRID_TAG_BASE;
-                    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",dataArray[row][column]]];
+                    imgView.layer.cornerRadius = 8;
+                    imgView.layer.masksToBounds = YES;
+                    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d_%d",dataArray[row][column],_skin]];
                     
                     [gridBgView addSubview:imgView];
                     

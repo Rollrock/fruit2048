@@ -15,12 +15,12 @@
 #import "YouMiAdvViewController.h"
 #import "AppsViewController.h"
 #import "MenuViewController.h"
-
+#import "AppDelegate.h"
 
 @interface MainViewController ()
 {
     GADBannerView *_bannerView;
-    
+    GameView * _gameView;
     
     BOOL _canShowAdv;
 }
@@ -42,9 +42,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    GameView * view = [[GameView alloc]initWithFrame:self.view.bounds];
+    _gameView = [[GameView alloc]initWithFrame:self.view.bounds];
     
-    [self.view addSubview:view];
+    [self.view addSubview:_gameView];
     
     [self laytouADVView];
     
@@ -104,8 +104,8 @@
         [btn addTarget:self action:@selector(menuClicken) forControlEvents:UIControlEventTouchUpInside];
         
     }
-
 }
+
 
 
 -(void)menuClicken
@@ -142,7 +142,19 @@
         
         _canShowAdv = NO;
     }
+}
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    AppDelegate * app = [[UIApplication sharedApplication] delegate];
+    
+    if( [app getSkinChange] )
+    {
+        [_gameView refreshGameSkin];
+        //
+        [app setSkinChange:NO];
+    }
 }
 
 

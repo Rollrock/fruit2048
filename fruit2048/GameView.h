@@ -24,4 +24,6 @@ typedef enum
 
 @interface GameView : UIView
 
+-(void)refreshGameSkin;
+
 @end
