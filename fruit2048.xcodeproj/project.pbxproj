@@ -65,6 +65,7 @@
 		4855D476199CD4F800E350D7 /* YouMiAdvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4855D475199CD4F800E350D7 /* YouMiAdvViewController.m */; };
 		4855D479199CE2EE00E350D7 /* AppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4855D478199CE2EE00E350D7 /* AppsViewController.m */; };
 		4855D47B199CE3DA00E350D7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4855D47A199CE3DA00E350D7 /* back.png */; };
+		4871CB8319C0772D001C819A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4871CB8219C0772D001C819A /* libGoogleAdMobAds.a */; };
 		4874CF9C193C194800996F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4874CF9B193C194800996F09 /* Foundation.framework */; };
 		4874CF9E193C194800996F09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4874CF9D193C194800996F09 /* CoreGraphics.framework */; };
 		4874CFA0193C194800996F09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4874CF9F193C194800996F09 /* UIKit.framework */; };
@@ -77,7 +78,6 @@
 		4874CFB7193C194800996F09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4874CF9F193C194800996F09 /* UIKit.framework */; };
 		4874CFBF193C194800996F09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4874CFBD193C194800996F09 /* InfoPlist.strings */; };
 		4874CFC1193C194800996F09 /* fruit2048Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4874CFC0193C194800996F09 /* fruit2048Tests.m */; };
-		4874CFE9193C199800996F09 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4874CFD2193C199800996F09 /* libGoogleAdMobAds.a */; };
 		4874CFEA193C199900996F09 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4874CFD4193C199800996F09 /* GameView.m */; };
 		4874CFEC193C199900996F09 /* 1024_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 4874CFD7193C199800996F09 /* 1024_1024.png */; };
 		4874CFED193C199900996F09 /* 120_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 4874CFD8193C199800996F09 /* 120_120.png */; };
@@ -180,6 +180,19 @@
 		4855D477199CE2EE00E350D7 /* AppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsViewController.h; sourceTree = "<group>"; };
 		4855D478199CE2EE00E350D7 /* AppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsViewController.m; sourceTree = "<group>"; };
 		4855D47A199CE3DA00E350D7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		4871CB7619C0772D001C819A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		4871CB7719C0772D001C819A /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		4871CB7819C0772D001C819A /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		4871CB7919C0772D001C819A /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		4871CB7A19C0772D001C819A /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		4871CB7B19C0772D001C819A /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
+		4871CB7C19C0772D001C819A /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
+		4871CB7D19C0772D001C819A /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		4871CB7E19C0772D001C819A /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		4871CB7F19C0772D001C819A /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
+		4871CB8019C0772D001C819A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		4871CB8119C0772D001C819A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		4871CB8219C0772D001C819A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		4874CF98193C194800996F09 /* fruit2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fruit2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4874CF9B193C194800996F09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4874CF9D193C194800996F09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,14 +209,6 @@
 		4874CFBC193C194800996F09 /* fruit2048Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fruit2048Tests-Info.plist"; sourceTree = "<group>"; };
 		4874CFBE193C194800996F09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4874CFC0193C194800996F09 /* fruit2048Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fruit2048Tests.m; sourceTree = "<group>"; };
-		4874CFCB193C199800996F09 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
-		4874CFCC193C199800996F09 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		4874CFCD193C199800996F09 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		4874CFCE193C199800996F09 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		4874CFCF193C199800996F09 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		4874CFD0193C199800996F09 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		4874CFD1193C199800996F09 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		4874CFD2193C199800996F09 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		4874CFD3193C199800996F09 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
 		4874CFD4193C199800996F09 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 		4874CFD7193C199800996F09 /* 1024_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024_1024.png; sourceTree = "<group>"; };
@@ -242,11 +247,11 @@
 				4874D006193C1A5B00996F09 /* MapKit.framework in Frameworks */,
 				4874D004193C1A1500996F09 /* AdSupport.framework in Frameworks */,
 				4855D46A199CD08E00E350D7 /* libOpenIDFA.a in Frameworks */,
+				4871CB8319C0772D001C819A /* libGoogleAdMobAds.a in Frameworks */,
 				4874D002193C1A0A00996F09 /* CoreLocation.framework in Frameworks */,
 				4874D000193C1A0100996F09 /* MessageUI.framework in Frameworks */,
 				4874CFFE193C19FC00996F09 /* AudioToolbox.framework in Frameworks */,
 				4874CF9E193C194800996F09 /* CoreGraphics.framework in Frameworks */,
-				4874CFE9193C199800996F09 /* libGoogleAdMobAds.a in Frameworks */,
 				4874CFA0193C194800996F09 /* UIKit.framework in Frameworks */,
 				4874CF9C193C194800996F09 /* Foundation.framework in Frameworks */,
 			);
@@ -298,6 +303,26 @@
 				4855D467199CD08E00E350D7 /* YouMiWallSpotView.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		4871CB7519C0772D001C819A /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				4871CB7619C0772D001C819A /* GADAdMobExtras.h */,
+				4871CB7719C0772D001C819A /* GADAdNetworkExtras.h */,
+				4871CB7819C0772D001C819A /* GADAdSize.h */,
+				4871CB7919C0772D001C819A /* GADBannerView.h */,
+				4871CB7A19C0772D001C819A /* GADBannerViewDelegate.h */,
+				4871CB7B19C0772D001C819A /* GADInAppPurchase.h */,
+				4871CB7C19C0772D001C819A /* GADInAppPurchaseDelegate.h */,
+				4871CB7D19C0772D001C819A /* GADInterstitial.h */,
+				4871CB7E19C0772D001C819A /* GADInterstitialDelegate.h */,
+				4871CB7F19C0772D001C819A /* GADModules.h */,
+				4871CB8019C0772D001C819A /* GADRequest.h */,
+				4871CB8119C0772D001C819A /* GADRequestError.h */,
+				4871CB8219C0772D001C819A /* libGoogleAdMobAds.a */,
+			);
+			path = AdMob;
 			sourceTree = "<group>";
 		};
 		4874CF8F193C194800996F09 = {
@@ -356,6 +381,7 @@
 		4874CFA2193C194800996F09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4871CB7519C0772D001C819A /* AdMob */,
 				4855D477199CE2EE00E350D7 /* AppsViewController.h */,
 				4855D478199CE2EE00E350D7 /* AppsViewController.m */,
 				4874CFE8193C199800996F09 /* MainViewController.m */,
@@ -368,7 +394,6 @@
 				4874D00D193CB3AF00996F09 /* Default-568h@2x.png */,
 				4874D00E193CB3AF00996F09 /* Default.png */,
 				4874D00F193CB3AF00996F09 /* Default@2x.png */,
-				4874CFCA193C199800996F09 /* AdMob */,
 				4874CFD3193C199800996F09 /* GameView.h */,
 				4874CFD4193C199800996F09 /* GameView.m */,
 				4874CFD5193C199800996F09 /* images */,
@@ -396,21 +421,6 @@
 				4874CFBD193C194800996F09 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4874CFCA193C199800996F09 /* AdMob */ = {
-			isa = PBXGroup;
-			children = (
-				4874CFCB193C199800996F09 /* GADAdSize.h */,
-				4874CFCC193C199800996F09 /* GADBannerView.h */,
-				4874CFCD193C199800996F09 /* GADBannerViewDelegate.h */,
-				4874CFCE193C199800996F09 /* GADInterstitial.h */,
-				4874CFCF193C199800996F09 /* GADInterstitialDelegate.h */,
-				4874CFD0193C199800996F09 /* GADRequest.h */,
-				4874CFD1193C199800996F09 /* GADRequestError.h */,
-				4874CFD2193C199800996F09 /* libGoogleAdMobAds.a */,
-			);
-			path = AdMob;
 			sourceTree = "<group>";
 		};
 		4874CFD5193C199800996F09 /* images */ = {

@@ -82,6 +82,7 @@
         [btn setTitle:@"来三" forState:UIControlStateNormal];
         btn.layer.cornerRadius = 5;
         btn.backgroundColor = [UIColor orangeColor];
+        btn.hidden = YES;
         
         [self.view addSubview:btn];
         
@@ -165,8 +166,8 @@
     
     [data setCalendar:cal];
     [data setYear:2014];
-    [data setMonth:11];
-    [data setDay:1];
+    [data setMonth:9];
+    [data setDay:20];
     
     NSDate * farDate = [cal dateFromComponents:data];
     
@@ -199,11 +200,22 @@
     
     CGRect rect = [[UIScreen mainScreen] bounds];
     
-    _bannerView = [[GADBannerView alloc]initWithFrame:CGRectMake(0.0,rect.size.height - 50-5,320,50)];//设置位置
+    NSLog(@"rect height:%f",rect.size.height);
+    
+    if( rect.size.height >= 568 )
+    {
+        _bannerView = [[GADBannerView alloc]initWithFrame:CGRectMake(0.0,rect.size.height - 100-20,320,100)];//设置位置
+    }
+    else
+    {
+        _bannerView = [[GADBannerView alloc]initWithFrame:CGRectMake(0.0,rect.size.height - 50-5,320,50)];//设置位置
+    }
+    
     
     _bannerView.adUnitID = @"a1527e3f3d6c7bc";//调用你的id
     
     _bannerView.rootViewController = self;
+    
     
     [self.view addSubview:_bannerView];//添加bannerview到你的试图
     
