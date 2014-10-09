@@ -10,29 +10,29 @@
 	<string>fruit2048</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BD5E3D3C-6503-4947-A6B0-EFA22CCCB04A</key>
+		<key>09E1E313CB0B0E580CCD39B4B5302E2B03B541D1</key>
 		<string>https://github.com/Rollrock/fruit2048.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>fruit2048.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BD5E3D3C-6503-4947-A6B0-EFA22CCCB04A</key>
+		<key>09E1E313CB0B0E580CCD39B4B5302E2B03B541D1</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Rollrock/fruit2048.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BD5E3D3C-6503-4947-A6B0-EFA22CCCB04A</string>
+	<string>09E1E313CB0B0E580CCD39B4B5302E2B03B541D1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BD5E3D3C-6503-4947-A6B0-EFA22CCCB04A</string>
+			<string>09E1E313CB0B0E580CCD39B4B5302E2B03B541D1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>fruit2048</string>
 		</dict>

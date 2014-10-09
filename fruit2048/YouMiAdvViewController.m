@@ -43,6 +43,7 @@
 }
 
 
+/*
 -(BOOL)canShowAdv
 {
     NSDateComponents * data = [[NSDateComponents alloc]init];
@@ -70,7 +71,7 @@
     
     return NO;
 }
-
+*/
 
 
 

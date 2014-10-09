@@ -17,6 +17,12 @@
 #import "MenuViewController.h"
 #import "AppDelegate.h"
 
+#define SHOW_ADV_YEAR  2014
+#define SHOW_ADV_MONTH  10
+#define SHOW_ADV_DAY   8
+
+
+
 @interface MainViewController ()
 {
     GADBannerView *_bannerView;
@@ -49,9 +55,25 @@
     [self laytouADVView];
     
     
+    //菜单
+    {
+        
+        CGRect rect = CGRectMake(100, 80, 60, 30);
+        UIButton * btn = [[UIButton alloc]initWithFrame:rect];
+        [btn setTitle:@"菜单" forState:UIControlStateNormal];
+        btn.layer.cornerRadius = 5;
+        btn.backgroundColor = [UIColor orangeColor];
+        
+        [self.view addSubview:btn];
+        
+        [btn addTarget:self action:@selector(menuClicken) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+    
 //  显示广告
     {
-        CGRect rect = CGRectMake(170, 30, 60, 30);
+        CGRect rect = CGRectMake(165, 30, 60, 30);
         UIButton * btn = [[UIButton alloc]initWithFrame:rect];
         [btn setTitle:@"你妹" forState:UIControlStateNormal];
         btn.layer.cornerRadius = 5;
@@ -69,7 +91,7 @@
         [self.view addSubview:btn];
         
         [btn addTarget:self action:@selector(showAdvClicked) forControlEvents:UIControlEventTouchUpInside];
-        _canShowAdv = YES;
+        
         
     }
     
@@ -77,37 +99,75 @@
     
     {
         
-        CGRect rect = CGRectMake(170, 80, 60, 30);
+        CGRect rect = CGRectMake(165, 80, 60, 30);
         UIButton * btn = [[UIButton alloc]initWithFrame:rect];
         [btn setTitle:@"来三" forState:UIControlStateNormal];
         btn.layer.cornerRadius = 5;
         btn.backgroundColor = [UIColor orangeColor];
-        btn.hidden = YES;
         
         [self.view addSubview:btn];
         
+        
+        if([self canShowAdv] )
+        {
+            btn.hidden = NO;
+        }
+        else
+        {
+            btn.hidden = YES;
+        }
+        
+        
         [btn addTarget:self action:@selector(showAppClicked) forControlEvents:UIControlEventTouchUpInside];
-        _canShowAdv = YES;
 
     }
     
-    //菜单
+    //微信分享
     {
         
-        CGRect rect = CGRectMake(100, 80, 60, 30);
+        CGRect rect = CGRectMake(230, 30, 80, 30);
         UIButton * btn = [[UIButton alloc]initWithFrame:rect];
-        [btn setTitle:@"菜单" forState:UIControlStateNormal];
+        [btn setTitle:@"分享拿奖" forState:UIControlStateNormal];
+        btn.layer.cornerRadius = 5;
+        btn.backgroundColor = [UIColor orangeColor];
+        
+        [self.view addSubview:btn];
+    
+        
+        [btn addTarget:self action:@selector(WeChatShare) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+
+    
+    // 给我打分
+    {
+        
+        CGRect rect = CGRectMake(230, 80, 80, 30);
+        UIButton * btn = [[UIButton alloc]initWithFrame:rect];
+        [btn setTitle:@"给我打分" forState:UIControlStateNormal];
         btn.layer.cornerRadius = 5;
         btn.backgroundColor = [UIColor orangeColor];
         
         [self.view addSubview:btn];
         
-        [btn addTarget:self action:@selector(menuClicken) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(Evalute) forControlEvents:UIControlEventTouchUpInside];
         
     }
+
+    _canShowAdv = YES;
 }
 
 
+-(void)WeChatShare
+{
+    
+}
+
+-(void)Evalute
+{
+    NSString *str =  [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@",@"884886468"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+}
 
 -(void)menuClicken
 {
@@ -165,9 +225,9 @@
     NSCalendar * cal = [NSCalendar currentCalendar];
     
     [data setCalendar:cal];
-    [data setYear:2014];
-    [data setMonth:9];
-    [data setDay:20];
+    [data setYear:SHOW_ADV_YEAR];
+    [data setMonth:SHOW_ADV_MONTH];
+    [data setDay:SHOW_ADV_DAY];
     
     NSDate * farDate = [cal dateFromComponents:data];
     

@@ -56,7 +56,6 @@
 		4812361519B9DC9000A79195 /* 2048_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 481235FE19B9DC9000A79195 /* 2048_3.png */; };
 		4812361619B9DC9000A79195 /* 4096_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 481235FF19B9DC9000A79195 /* 4096_2.png */; };
 		4812361819B9FC0B00A79195 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 4812361719B9FC0B00A79195 /* select.png */; };
-		4855D46A199CD08E00E350D7 /* libOpenIDFA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4855D468199CD08E00E350D7 /* libOpenIDFA.a */; };
 		4855D46B199CD08E00E350D7 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4855D469199CD08E00E350D7 /* libYouMi.a */; };
 		4855D46D199CD0F600E350D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4855D46C199CD0F600E350D7 /* CoreData.framework */; };
 		4855D46F199CD17C00E350D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4855D46E199CD17C00E350D7 /* Security.framework */; };
@@ -96,6 +95,7 @@
 		4874D010193CB3AF00996F09 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4874D00D193CB3AF00996F09 /* Default-568h@2x.png */; };
 		4874D011193CB3AF00996F09 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4874D00E193CB3AF00996F09 /* Default.png */; };
 		4874D012193CB3AF00996F09 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4874D00F193CB3AF00996F09 /* Default@2x.png */; };
+		489E345419E6D76400A296AC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 489E345119E6D76400A296AC /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,16 +160,13 @@
 		481235FF19B9DC9000A79195 /* 4096_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4096_2.png; sourceTree = "<group>"; };
 		4812361719B9FC0B00A79195 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		4855D45E199CD08E00E350D7 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
-		4855D45F199CD08E00E350D7 /* youmiconfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = youmiconfuse.h; sourceTree = "<group>"; };
 		4855D460199CD08E00E350D7 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
 		4855D461199CD08E00E350D7 /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
-		4855D462199CD08E00E350D7 /* YouMiSpots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiSpots.h; sourceTree = "<group>"; };
 		4855D463199CD08E00E350D7 /* YouMiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiView.h; sourceTree = "<group>"; };
 		4855D464199CD08E00E350D7 /* YouMiWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWall.h; sourceTree = "<group>"; };
 		4855D465199CD08E00E350D7 /* YouMiWallAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallAppModel.h; sourceTree = "<group>"; };
 		4855D466199CD08E00E350D7 /* YouMiWallSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpot.h; sourceTree = "<group>"; };
 		4855D467199CD08E00E350D7 /* YouMiWallSpotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpotView.h; sourceTree = "<group>"; };
-		4855D468199CD08E00E350D7 /* libOpenIDFA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOpenIDFA.a; sourceTree = "<group>"; };
 		4855D469199CD08E00E350D7 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
 		4855D46C199CD0F600E350D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4855D46E199CD17C00E350D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -229,6 +226,10 @@
 		4874D00D193CB3AF00996F09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4874D00E193CB3AF00996F09 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4874D00F193CB3AF00996F09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		488E4A4119D0742500688FFC /* youmiconfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = youmiconfuse.h; sourceTree = "<group>"; };
+		489E345119E6D76400A296AC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		489E345219E6D76400A296AC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		489E345319E6D76400A296AC /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +239,7 @@
 			files = (
 				4874D00C193C1A7100996F09 /* StoreKit.framework in Frameworks */,
 				4855D473199CD19A00E350D7 /* libsqlite3.dylib in Frameworks */,
+				489E345419E6D76400A296AC /* libWeChatSDK.a in Frameworks */,
 				4874D008193C1A6200996F09 /* QuartzCore.framework in Frameworks */,
 				4855D471199CD18900E350D7 /* CFNetwork.framework in Frameworks */,
 				4874D00A193C1A6B00996F09 /* SystemConfiguration.framework in Frameworks */,
@@ -246,7 +248,6 @@
 				4855D46B199CD08E00E350D7 /* libYouMi.a in Frameworks */,
 				4874D006193C1A5B00996F09 /* MapKit.framework in Frameworks */,
 				4874D004193C1A1500996F09 /* AdSupport.framework in Frameworks */,
-				4855D46A199CD08E00E350D7 /* libOpenIDFA.a in Frameworks */,
 				4871CB8319C0772D001C819A /* libGoogleAdMobAds.a in Frameworks */,
 				4874D002193C1A0A00996F09 /* CoreLocation.framework in Frameworks */,
 				4874D000193C1A0100996F09 /* MessageUI.framework in Frameworks */,
@@ -273,6 +274,7 @@
 		4855D45B199CD08E00E350D7 /* youmi */ = {
 			isa = PBXGroup;
 			children = (
+				488E4A4119D0742500688FFC /* youmiconfuse.h */,
 				4855D45C199CD08E00E350D7 /* lib */,
 			);
 			path = youmi;
@@ -282,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				4855D45D199CD08E00E350D7 /* include */,
-				4855D468199CD08E00E350D7 /* libOpenIDFA.a */,
 				4855D469199CD08E00E350D7 /* libYouMi.a */,
 			);
 			path = lib;
@@ -292,10 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				4855D45E199CD08E00E350D7 /* YouMiConfig.h */,
-				4855D45F199CD08E00E350D7 /* youmiconfuse.h */,
 				4855D460199CD08E00E350D7 /* YouMiDelegateProtocol.h */,
 				4855D461199CD08E00E350D7 /* YouMiPointsManager.h */,
-				4855D462199CD08E00E350D7 /* YouMiSpots.h */,
 				4855D463199CD08E00E350D7 /* YouMiView.h */,
 				4855D464199CD08E00E350D7 /* YouMiWall.h */,
 				4855D465199CD08E00E350D7 /* YouMiWallAppModel.h */,
@@ -381,6 +380,7 @@
 		4874CFA2193C194800996F09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				489E345019E6D76400A296AC /* WeChatSDK */,
 				4871CB7519C0772D001C819A /* AdMob */,
 				4855D477199CE2EE00E350D7 /* AppsViewController.h */,
 				4855D478199CE2EE00E350D7 /* AppsViewController.m */,
@@ -482,6 +482,16 @@
 				4874CFE6193C199800996F09 /* bg.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		489E345019E6D76400A296AC /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				489E345119E6D76400A296AC /* libWeChatSDK.a */,
+				489E345219E6D76400A296AC /* WXApi.h */,
+				489E345319E6D76400A296AC /* WXApiObject.h */,
+			);
+			path = WeChatSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -721,7 +731,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s";
@@ -771,11 +781,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fruit2048/fruit2048-Prefix.pch";
 				INFOPLIST_FILE = "fruit2048/fruit2048-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/fruit2048/AdMob",
 					"$(PROJECT_DIR)/fruit2048/youmi/lib",
+					"$(PROJECT_DIR)/fruit2048/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -789,16 +800,17 @@
 		4874CFC6193C194800996F09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fruit2048/fruit2048-Prefix.pch";
 				INFOPLIST_FILE = "fruit2048/fruit2048-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/fruit2048/AdMob",
 					"$(PROJECT_DIR)/fruit2048/youmi/lib",
+					"$(PROJECT_DIR)/fruit2048/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
