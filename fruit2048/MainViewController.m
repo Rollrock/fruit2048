@@ -19,7 +19,7 @@
 
 #define SHOW_ADV_YEAR  2014
 #define SHOW_ADV_MONTH  10
-#define SHOW_ADV_DAY   8
+#define SHOW_ADV_DAY   29
 
 
 
@@ -127,7 +127,7 @@
         
         CGRect rect = CGRectMake(230, 30, 80, 30);
         UIButton * btn = [[UIButton alloc]initWithFrame:rect];
-        [btn setTitle:@"分享拿奖" forState:UIControlStateNormal];
+        [btn setTitle:@"分享我们" forState:UIControlStateNormal];
         btn.layer.cornerRadius = 5;
         btn.backgroundColor = [UIColor orangeColor];
         
